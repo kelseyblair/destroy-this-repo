@@ -1,9 +1,17 @@
-CC		= gcc
+CC      = gcc
+SRCDIR  = src
+SOURCES = fizzbuzz.c
+OBJ     = fizzbuzz.o
+OBJDIR  = out
+TARGET  = fb
 
-CFLAGS	= -Wall
+CFLAGS	= -g -Wall
 
-main: fizzbuzz.o 
-	$(CC) -o fizzbuzz.out fizzbuzz.o
+$(TARGET): $(SRCDIR)/$(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRCDIR)/$(SOURCES)
+
+.PHONY: clean
 
 clean:
-	rm -f fizzbuzz *.o
+	rm -f $(OBJDIR)/$(OBJ) $(TARGET)
+	rm -r $(TARGET).dSYM

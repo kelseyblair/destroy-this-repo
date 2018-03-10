@@ -1,6 +1,7 @@
 
 # Object files
-*.o
+out/
 
-#Executable files
-*.out
+# Target files
+fb
+*.dSYM
