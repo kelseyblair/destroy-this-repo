@@ -14,4 +14,4 @@ $(TARGET): $(SRCDIR)/$(SRC)
 
 clean:
 	rm -f $(OBJDIR)/$(OBJ) $(TARGET)
-	rm -r $(TARGET).dSYM
+	rm -rf $(TARGET).dSYM
